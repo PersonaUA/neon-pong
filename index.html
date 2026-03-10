@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>NEON PONG</title>
-<meta name="description" content="Неоновый пинг-понг — играй в браузере!">
+<meta name="description" content="Neon Ping-Pong - Play in your browser!">
 
 <meta property="og:title" content="NEON PONG">
-<meta property="og:description" content="Неоновый пинг-понг — играй в браузере!">
+<meta property="og:description" content="Neon Ping-Pong - Play in your browser">
 <meta property="og:image" content="https://personaua.github.io/neon-pong/screen.jpg">
 <meta property="og:image:secure_url" content="https://personaua.github.io/neon-pong/screen.jpg">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NEON PONG">
-<meta name="twitter:description" content="Неоновый пинг-понг — играй в браузере!">
+<meta name="twitter:description" content="Neon Ping-Pong - Play in your browser">
 <meta name="twitter:image" content="https://personaua.github.io/neon-pong/screen.jpg">
 
 <style>
@@ -360,22 +360,22 @@
     <div class="game-title">NEON<br>PONG</div>
     <div class="game-subtitle">Retro · Cyber · 2084</div>
 
-    <div class="difficulty-label">Сложность</div>
+    <div class="difficulty-label">LEVEL</div>
     <div class="diff-btns">
       <button class="diff-btn" data-d="easy">EASY</button>
       <button class="diff-btn selected" data-d="medium">MED</button>
       <button class="diff-btn" data-d="hard">HARD</button>
     </div>
 
-    <button class="btn" id="start-btn">▶ СТАРТ</button>
-    <div class="hint-text">Двигай ракетку пальцем</div>
+    <button class="btn" id="start-btn">▶ PLAY</button>
+    <div class="hint-text">Move the paddle with your finger or mouse</div>
   </div>
 
   <!-- Pause Screen -->
   <div class="screen hidden" id="pause-screen">
-    <div class="result-title pause">ПАУЗА</div>
+    <div class="result-title pause">PAUSE</div>
     <div class="result-score" id="pause-score"></div>
-    <button class="btn" id="resume-btn">▶ ПРОДОЛЖИТЬ</button>
+    <button class="btn" id="resume-btn">▶ CONNTINUE</button>
     <button class="btn" id="pause-menu-btn" style="border-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.5);">МЕНЮ</button>
   </div>
 
@@ -383,7 +383,7 @@
   <div class="screen hidden" id="gameover-screen">
     <div class="result-title" id="result-title"></div>
     <div class="result-score" id="final-score"></div>
-    <button class="btn" id="restart-btn">▶ ЕЩЁ РАЗ</button>
+    <button class="btn" id="restart-btn">▶ TRY AGAIN</button>
     <button class="btn" id="menu-btn" style="border-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.5);">МЕНЮ</button>
   </div>
 </div>
@@ -637,7 +637,7 @@ function showGameOver(playerWon) {
   pauseBtn.style.display = 'none';
 
   const titleEl = document.getElementById('result-title');
-  titleEl.textContent = playerWon ? 'ПОБЕДА!' : 'ПОРАЖЕНИЕ';
+  titleEl.textContent = playerWon ? 'WIN!' : 'LOSE';
   titleEl.className = 'result-title ' + (playerWon ? 'win' : 'lose');
   document.getElementById('final-score').textContent = `${state.scoreAI} : ${state.scorePlayer}`;
 
